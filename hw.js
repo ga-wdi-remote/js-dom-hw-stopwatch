@@ -3,7 +3,7 @@
 // See LICENSE for details.
 
 /// Application Logic ///
-const StopwatchLogic = {
+const Stopwatch = {
   advanceClock: function(){ // Provided Code : DO NOT EDIT THIS FUNCTION
     if (Stopwatch.isRunning) {
       Stopwatch.updateTimeValues();
@@ -33,18 +33,20 @@ const StopwatchLogic = {
 };
 
 /// User Interface ///
-const Display = {
-  zeroFill: function(number, length){
-    // Your Code Here
-  },
+const ViewEngine = {
   updateTimeDisplay: function(){
     // Your Code Here
   },
   updateLapList: function(){
     // Your Code Here
   },
+  viewHelpers: {
+    zeroFill: function(number, length){
+      // Your Code Here
+    }
+  }
 };
-const EventHandlers = {
+const AppController = {
   onClickStart: function(event) {
     // Your Code Here
   },
@@ -56,8 +58,7 @@ const EventHandlers = {
   }
 };
 
-
 window.onload = function(){
-  // Set your event handlers in the lines below.
+  // Attach AppController methods to the DOM as event handlers here.
 
 };
