@@ -45,13 +45,13 @@ const Display = {
   },
 };
 const EventHandlers = {
-  onClickStart: function() {
+  onClickStart: function(event) {
     // Your Code Here
   },
-  onClickLap: function(){
+  onClickLap: function(event){
     // Your Code Here
   },
-  onClickStopReset: function(){
+  onClickStopReset: function(event){
     // Your Code Here
   }
 };
