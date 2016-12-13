@@ -31,7 +31,7 @@ trying out something new). -->
 
 ## Instructions
 
-For this assignment, you will be helping to complete an in-browser stopwatch
+For this assignment, you will be helping to build an in-browser stopwatch
 app! Its specified behavior is as follows:
 
 ```markdown
@@ -67,20 +67,21 @@ working on, an intended implementation based around three separate objects,
 `Stopwatch`, `Display`, and `EventHandlers`, each of which is responsible for
 handling a different part of the application.
 
-`Stopwatch` holds the actual logic of the stopwatch:
+`Stopwatch` holds the actual business logic and data of the stopwatch:
 (a) maintaining a 'state' (i.e.  running vs not running),
 (b) managing the 'time' on the stopwatch, and performing basic actions like
     starting and stopping the timer,
 and
 (c) keeping track of and creating 'lap' records.
 
-`Display` is responsible for showing the data managed by `Stopwatch` in the
+`ViewEngine` is responsible for showing the data managed by `Stopwatch` in the
 browser by changing the time display and the lap list.
 
-`EventHandlers`, as the name suggests, holds all of the various event handlers
-that the app will use. Rather than just writing anonymous functions for
-handlers, the app's original designers wanted to give each of those handler
-functions names so that they could (eventually) be tested programattically.
+`AppController`, as the name suggests, sits on top of and controls the
+application as a whole -- it handles UI events and moves data from one
+component to another. Its methods will get attached as event handlers to
+different elements in the DOM (which is why they have names like `onClickStart`,
+`onClickStop`, etc).
 
 Detailed specifications for each of these components (also known as
 _**unit specs**_) can be found in the [`spec`](./spec) directory. Unlike the
@@ -93,8 +94,14 @@ as long as the stopwatch is running, and to call `updateTimeValues` each
 time. _**Please do not alter this method.**_. Doing so could cause the
 entire application to break.
 
-Using these guidelines, create a working
-application that meets the requirements given in the feature spec!
+### MVP Requirements
+
+Satisfy all feature specs related to starting and stopping the watch (but
+_**NOT**_ those related to recording laps).
+
+### Reach
+
+Implement all features given in the spec, _including_ recording laps.
 
 <!-- ### Testing Your Work
 
@@ -106,9 +113,12 @@ carefully -- it may give you a clue about what to do next. -->
 
 ## Submitting Your Work
 
-When you're ready, push the code to your fork on GitHub and create an issue with
-a title in the format "YourGitHubUsername -- Week XX Day XX".
-The issue body should have:
+When you're ready to submit your work,
+
+1.  Push your code to your fork of the class repo.
+2.  File an issue on the class repo titled "Your Name -- wXXdXX".
+
+The issue should include:
 
 -   A link that points back to your fork.
 
