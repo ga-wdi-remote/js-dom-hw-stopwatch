@@ -1,4 +1,4 @@
-# Unit Spec : `Display`
+# Unit Spec : `ViewEngine`
 
 ## `zeroFill`
 
@@ -20,7 +20,9 @@
     with zeros so that the strings are at least two characters long.
 ```
 
-## `updateLapList`
+## `viewHelpers`
+
+### `updateLapList`
 
 ```markdown
 1.  It displays the recorded laps inside the `lap-list` element,
