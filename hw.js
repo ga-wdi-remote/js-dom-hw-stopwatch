@@ -34,10 +34,10 @@ const Stopwatch = {
 
 /// User Interface ///
 const ViewEngine = {
-  updateTimeDisplay: function(){
+  updateTimeDisplay: function(mins, secs, millisecs){
     // Your Code Here
   },
-  updateLapList: function(){
+  updateLapList: function(laps){
     // Your Code Here
   },
   viewHelpers: {
