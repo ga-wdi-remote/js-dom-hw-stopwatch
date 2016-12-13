@@ -2,9 +2,9 @@
 // Copyright (C) 2016 Matt Brendzel under the GNU General Public License.
 // See LICENSE for details.
 
-/// Application Logic ///
+/// Data & Core Business Logic ///
 const Stopwatch = {
-  advanceClock: function(){ // Provided Code : DO NOT EDIT THIS FUNCTION
+  advanceClock: function(){
     if (Stopwatch.isRunning) {
       Stopwatch.updateTimeValues();
       setTimeout(Stopwatch.advanceClock, 10);
@@ -15,6 +15,7 @@ const Stopwatch = {
   secs: 0,
   millisecs: 0,
   laps: [],
+  // DO NOT EDIT ABOVE THIS LINE
   updateTimeValues: function(){
     // Your Code Here
   },
@@ -46,6 +47,8 @@ const ViewEngine = {
     }
   }
 };
+
+/// Top-Level Application Code ///
 const AppController = {
   onClickStart: function(event) {
     // Your Code Here
