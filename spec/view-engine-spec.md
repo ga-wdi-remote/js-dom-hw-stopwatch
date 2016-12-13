@@ -15,7 +15,8 @@
 ```markdown
 1.  It displays the values of minutes, seconds, and (tens of)
     milliseconds elapsed in the DOM element with id `time-display`, in
-    the format `00:00:00`.
+    the format `MM:SS:ss` (e.g. `100:01:34`, `05:01:10`), starting with
+    `00:00:00`.
 2.  It pads the values of minutes, seconds, and (tens of) milliseconds
     with zeros so that the strings are at least two characters long.
 ```

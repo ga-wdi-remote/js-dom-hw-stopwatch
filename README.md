@@ -39,7 +39,8 @@ app! Its specified behavior is as follows:
     a.  and the stopwatch is not currently running,
       i.    the stopwatch will begin running.
       ii.   the numbers of minutes, seconds, and (tens of) milliseconds elapsed
-            will show up in the browser, updated once every 10 milliseconds.
+            will show up in the browser, updated once every 10 milliseconds, in
+            the format `MM:SS:ss` (e.g. `100:01:34`, `05:01:10`).
     b.  and the stopwatch is already running,
       i. nothing will happen.
 2. When the 'LAP' button is clicked,
